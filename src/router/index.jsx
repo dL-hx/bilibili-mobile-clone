@@ -19,6 +19,8 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+], {
+  basename: '/bilibili-mobile-clone'
+});
 
 export default router;
