@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/bilibili-mobile-clone/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <script type="module" crossorigin src="/bilibili-mobile-clone/assets/index-B_h1lg2B.js"></script>
+    <link rel="stylesheet" crossorigin href="/bilibili-mobile-clone/assets/index-CGtKDe2D.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // 实现rem转换逻辑
+      function setRemUnit() {
+        // 设置根元素font-size：1rem = 10px
+        const rootFontSize = 10;
+        const dpr = window.devicePixelRatio || 1;
+        const scale = 1 / dpr;
+        
+        // 设置viewport
+        document.querySelector('meta[name="viewport"]').setAttribute('content', `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no`);
+        
+        // 根据屏幕宽度动态调整根元素font-size
+        const docEl = document.documentElement;
+        const width = docEl.clientWidth;
+        // 设计稿宽度为750px，因此当屏幕宽度为750px时，根元素font-size为10px
+        const fontSize = rootFontSize * (width / 750);
+        docEl.style.fontSize = fontSize + 'px';
+      }
+      
+      // 初始化
+      setRemUnit();
+      
+      // 监听窗口大小变化
+      window.addEventListener('resize', setRemUnit);
+      // 监听页面加载完成
+      window.addEventListener('pageshow', (e) => {
+        if (e.persisted) {
+          setRemUnit();
+        }
+      });
+    </script>
+  </body>
+</html>
