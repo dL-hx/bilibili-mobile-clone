@@ -2,6 +2,10 @@
 
 这是一个基于 React 技术栈的 Bilibili 移动端克隆项目，旨在实现 Bilibili 移动端的核心功能和界面效果。
 
+## 在线预览
+
+[https://dl-hx.github.io/bilibili-mobile-clone/](https://dl-hx.github.io/bilibili-mobile-clone/)
+
 ## 单位转换说明
 
 1rem = 10px，所以转换比例是1px = 0.1rem
