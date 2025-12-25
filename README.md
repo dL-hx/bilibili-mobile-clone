@@ -79,7 +79,7 @@ npm install
 npm run dev
 ```
 
-应用将在 `http://localhost:5173` 启动（默认端口）。
+应用将在 `http://localhost:5173/bilibili-mobile-clone/` 启动（默认端口）。
 
 ### 构建生产版本
 
